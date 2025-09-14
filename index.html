@@ -12,12 +12,23 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#weather">Weather</a></li>
-                <li><a href="#crop">Crop Planning</a></li>
-                <li><a href="#marketplace">Marketplace</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#help">Helpline & FAQs</a></li>
+                <li class="dropdown">
+  	<a href="#Equipments" class="dropbtn">Equipments</a>
+  	<ul class="dropdown-content">
+    	<li><a href="#ree">Renewable Energy Engineering</a></li>
+    	<li><a href="#fmp">Farm Machinery & Power Engineering</a></li>
+    	<li><a href="#pfe">Processing & Food Engineering</a></li>
+    	<li><a href="#swce">Soil & Water Conservation Engineering</a></li>
+    	<li><a href="#ide">Irrigation & Drainage Engineering</a></li>
+	<li><a href="#ide">Farm Structure</a></li>
+  	</ul>
+	</li>
+
+                <li><a href="#Policies & Subsidies">Policies & Subsidies</a></li>
+                <li><a href="#Book One Day Training">Book One Day Training</a></li>
+		<li><a href="#Assistance on Farm">Assistance on Farm</a></li>
+                <li><a href="#contact Us">Contact</a></li>
+                <li><a href="#help">General Query</a></li>
             </ul>
         </nav>
     </header>
@@ -39,9 +50,12 @@
         </article>
     </section>
 
-    <section id="weather">
-        <h2>Weather Forecast</h2>
-        <p>[Weather info placeholder – integrate API or static data]</p>
+<section id="Equipments">
+  <h2>Equipment List</h2>
+  <p>[Weather info placeholder – integrate API or static data]</p>
+  </select>
+</section>
+
     </section>
 
     <section id="crop">
@@ -80,5 +94,25 @@
     <footer>
         <p>&copy; 2025 Farmer Support Portal. All rights reserved.</p>
     </footer>
+<script>
+  // Select the Equipments button and dropdown content
+  const dropBtn = document.querySelector('.dropbtn');
+  const dropdown = document.querySelector('.dropdown-content');
+
+  dropBtn.addEventListener('click', function (e) {
+    e.preventDefault(); // stop jumping to #Equipments
+    dropdown.classList.toggle('show'); // toggle dropdown
+  });
+
+  // Close dropdown if clicked outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.matches('.dropbtn')) {
+      dropdown.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>
+
 </body>
 </html>

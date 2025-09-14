@@ -17,22 +17,57 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #4CAF50; /* keep nav bar green */
 }
 
 nav ul li {
+    position: relative; /* needed for dropdown positioning */
     margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 320px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content li a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+/* When JavaScript adds .show, display the dropdown */
+.dropdown-content.show {
+    display: block;
 }
 
 section {
