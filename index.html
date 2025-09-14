@@ -1,118 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Farmer Support Portal</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmer Support Portal</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Farmer Support Portal</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li class="dropdown">
-  	<a href="#Equipments" class="dropbtn">Equipments</a>
-  	<ul class="dropdown-content">
-    	<li><a href="#ree">Renewable Energy Engineering</a></li>
-    	<li><a href="#fmp">Farm Machinery & Power Engineering</a></li>
-    	<li><a href="#pfe">Processing & Food Engineering</a></li>
-    	<li><a href="#swce">Soil & Water Conservation Engineering</a></li>
-    	<li><a href="#ide">Irrigation & Drainage Engineering</a></li>
-	<li><a href="#ide">Farm Structure</a></li>
-  	</ul>
-	</li>
+  <header>
+    <h1>Farmer Support Portal</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
 
-                <li><a href="#Policies & Subsidies">Policies & Subsidies</a></li>
-                <li><a href="#Book One Day Training">Book One Day Training</a></li>
-		<li><a href="#Assistance on Farm">Assistance on Farm</a></li>
-                <li><a href="#contact Us">Contact</a></li>
-                <li><a href="#help">General Query</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Equipments dropdown -->
+        <li class="dropdown">
+          <a href="#Equipments" class="dropbtn">Equipments</a>
+          <ul class="dropdown-content">
+            <li><a href="#ree">Renewable Energy Engineering</a></li>
+            <li><a href="#fmp">Farm Machinery & Power Engineering</a></li>
+            <li><a href="#pfe">Processing & Food Engineering</a></li>
+            <li><a href="#ide">Irrigation & Drainage Engineering</a></li>
+            <li><a href="#fs">Farm Structure</a></li>
+          </ul>
+        </li>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We support farmers by providing reliable information, tools, and access to resources for better farming practices and sustainable agriculture.</p>
-    </section>
+        <!-- Policies & Subsidies dropdown -->
+	<li class="dropdown">
+        	<a href="#policies" class="dropbtn">Policies & Subsidies</a>
+	<ul class="dropdown-content">
+            <li><a href="https://mahadbt.maharashtra.gov.in/Farmer/SchemeData/SchemeData?str=E9DDFA703C38E51ABCB57D16990D3318">Solar Fencing</a></li>
+            <li><a href="https://energy.maharashtra.gov.in/en/scheme/pm-kusum/?utm_source=chatgpt.com">Solar Irrigation Pump(MH)</a></li>
+            <li><a href="https://www.india.gov.in/spotlight/pm-kusum-pradhan-mantri-kisan-urja-suraksha-evam-utthaan-mahabhiyan-scheme">Solar Irrigation Pump(INDIA)</a></li>
+            <li><a href="https://www.india.gov.in/spotlight/pm-kusum-pradhan-mantri-kisan-urja-suraksha-evam-utthaan-mahabhiyan-scheme?utm_source=chatgpt.com">Solar Panels / Polyhouse Integration</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Pradhan_Mantri_Surya_Ghar_Muft_Bijli_Yojana">Pradhan Mantri Surya Ghar Muft Bijli Yojana</a></li>
+          </ul>
+</li>
+        <li><a href="#training">Book One Day Training</a></li>
+        <li><a href="#assistance">Assistance on Farm</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#help">General Query</a></li>
+      </ul>
+    </nav>
+<!-- Language switcher -->
+<div id="google_translate_element"></div>
 
-    <section id="articles">
-        <h2>Articles & Blog Posts</h2>
-        <article>
-            <h3>Farming Techniques for Small Farmers</h3>
-            <p>Here you can share best practices, advice, and research.</p>
-        </article>
-        <article>
-            <h3>Pest and Disease Management</h3>
-            <p>Tips and guides on protecting crops effectively.</p>
-        </article>
-    </section>
+  </header>
 
-<section id="Equipments">
-  <h2>Equipment List</h2>
-  <p>[Weather info placeholder – integrate API or static data]</p>
-  </select>
+<section id="about">
+  <h2>About Us</h2>
+  <p>We support farmers by providing reliable information, tools, and access to resources for better farming practices and sustainable agriculture.</p>
+ <h2>Our Objectives</h2>
+  <ul>
+    <li>To introduce farmers to technology.</li>
+    <li>To create awareness among farmers about modern technology and machinery.</li>
+    <li>To attract youth towards agriculture- and industry-related enterprises.</li>
+    <li>To provide information on key issues of the agricultural system, crop processing, and mechanization facilities.</li>
+  </ul>
+
+  <h2>Services</h2>
+  <ul>
+    <li>We wish to use the educational knowledge available in our field to support farmers.</li>
+    <li>To provide guidance for solving their problems.</li>
+  </ul>
 </section>
 
-    </section>
+<section id="slider">
+  <h2>Gallery</h2>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="photo1.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+      <img src="photo3.jpg" alt="Photo 3">
+      <img src="photo4.jpg" alt="Photo 4">
+	<img src="photo5.jpg" alt="Photo 5">
+	
+    </div>
+<button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+</section>
 
-    <section id="crop">
-        <h2>Crop Planning Tools</h2>
-        <p>[Crop planner placeholder – add calculator or guide]</p>
-    </section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form action="#" method="post">
+    <label for="name">Name:</label><br/>
+    <input type="text" id="name" name="name" required><br/>
+    <label for="email">Email:</label><br/>
+    <input type="email" id="email" name="email" required><br/>
+    <label for="message">Message:</label><br/>
+    <textarea id="message" name="message" rows="5" required></textarea><br/>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-    <section id="marketplace">
-        <h2>Marketplace</h2>
-        <p>[List your produce here or connect with buyers]</p>
-    </section>
+<section id="help">
+  <h2>General Query</h2>
+  <p>For assistance, contact us at: 1800-123-456 or email support@farmersupport.com</p>
+  <h4>Frequently Asked Questions</h4>
+  <ul>
+    <li>Q: How can I access government schemes?<br/>A: Visit our articles section for details.</li>
+    <li>Q: Where can I sell my produce?<br/>A: Use the marketplace section above.</li>
+  </ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label><br/>
-            <input type="text" id="name" name="name" required><br/>
-            <label for="email">Email:</label><br/>
-            <input type="email" id="email" name="email" required><br/>
-            <label for="message">Message:</label><br/>
-            <textarea id="message" name="message" rows="5" required></textarea><br/>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <footer>
+    <p>&copy; 2025 Farmer Support Portal. All rights reserved.</p>
+  </footer>
 
-    <section id="help">
-        <h2>Helpline & FAQs</h2>
-        <p>For assistance, contact us at: 1800-123-456 or email support@farmersupport.com</p>
-        <h4>Frequently Asked Questions</h4>
-        <ul>
-            <li>Q: How can I access government schemes?<br/>A: Visit our articles section for details.</li>
-            <li>Q: Where can I sell my produce?<br/>A: Use the marketplace section above.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Farmer Support Portal. All rights reserved.</p>
-    </footer>
-<script>
-  // Select the Equipments button and dropdown content
-  const dropBtn = document.querySelector('.dropbtn');
-  const dropdown = document.querySelector('.dropdown-content');
-
-  dropBtn.addEventListener('click', function (e) {
-    e.preventDefault(); // stop jumping to #Equipments
-    dropdown.classList.toggle('show'); // toggle dropdown
+  <script>
+    // Handle multiple dropdowns automatically
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
+    const content = btn.nextElementSibling;
+    content.classList.toggle('show');
   });
+});
 
-  // Close dropdown if clicked outside
-  window.addEventListener('click', function(e) {
-    if (!e.target.matches('.dropbtn')) {
-      dropdown.classList.remove('show');
-    }
-  });
+
+    // Close dropdowns when clicking outside
+    window.addEventListener('click', e => {
+      if (!e.target.matches('.dropbtn')) {
+        document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
+      }
+    });
+ 
+ let currentIndex = 0;
+  const slides = document.getElementById("slides");
+  const totalSlides = slides.children.length;
+  let slideInterval;
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function changeSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+    updateSlide();
+    resetAutoSlide();
+  }
+
+  function autoSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(autoSlide, 4000); // Change every 4 sec
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  // Start auto sliding when page loads
+  window.onload = () => {
+    updateSlide();
+    startAutoSlide();
+  };  </script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+      pageLanguage: 'en',            // your default page language
+      includedLanguages: 'en,hi,mr', // languages you want: English, Hindi, Marathi
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
 </script>
-</body>
-</html>
-
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
