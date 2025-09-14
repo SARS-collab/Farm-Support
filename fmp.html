@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farm Machinery & Power Engineering – Farmer Support Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Farmer Support Portal</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Equipments</a>
+        <ul class="dropdown-content">
+          <li><a href="ree.html">Renewable Energy Engineering</a></li>
+          <li><a href="fmp.html">Farm Machinery & Power Engineering</a></li>
+          <li><a href="pfe.html">Processing & Food Engineering</a></li>
+          <li><a href="swce.html">Soil & Water Conservation Engineering</a></li>
+          <li><a href="ide.html">Irrigation & Drainage Engineering</a></li>
+          <li><a href="fs.html">Farm Structure</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#help">General Query</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h2>Farm Machinery & Power Engineering</h2>
+<p>Put your FMP content here — tractors, implements, mechanisation, etc.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Farmer Support Portal. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.dropbtn').forEach(btn=>{
+  btn.addEventListener('click', e=>{
+    e.preventDefault();
+    document.querySelectorAll('.dropdown-content').forEach(dc=>dc.classList.remove('show'));
+    btn.nextElementSibling.classList.toggle('show');
+  });
+});
+window.addEventListener('click', e=>{
+  if(!e.target.matches('.dropbtn')){
+    document.querySelectorAll('.dropdown-content').forEach(dc=>dc.classList.remove('show'));
+  }
+});
+</script>
+</body>
+</html>
