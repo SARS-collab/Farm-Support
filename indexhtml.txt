@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Farmer Support Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Farmer Support Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#Equipments">Equipments</a></li>
+                <li><a href="#crop">Crop Planning</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#help">Helpline & FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We support farmers by providing reliable information, tools, and access to resources for better farming practices and sustainable agriculture.</p>
+    </section>
+
+    <section id="articles">
+        <h2>Articles & Blog Posts</h2>
+        <article>
+            <h3>Farming Techniques for Small Farmers</h3>
+            <p>Here you can share best practices, advice, and research.</p>
+        </article>
+        <article>
+            <h3>Pest and Disease Management</h3>
+            <p>Tips and guides on protecting crops effectively.</p>
+        </article>
+    </section>
+
+<section id="Equipments">
+  <h2>Weather Forecast</h2>
+  <p>[Weather info placeholder – integrate API or static data]</p>
+  <label for="equipmentsDropdown">Select Equipment:</label>
+  <select id="equipmentsDropdown" name="equipments">
+    <option value="ree">REE</option>
+    <option value="fmp">FMP</option>
+    <option value="pfe">PFE</option>
+    <option value="swce">SWCE</option>
+    <option value="ide">IDE</option>
+  </select>
+</section>
+
+    </section>
+
+    <section id="crop">
+        <h2>Crop Planning Tools</h2>
+        <p>[Crop planner placeholder – add calculator or guide]</p>
+    </section>
+
+    <section id="marketplace">
+        <h2>Marketplace</h2>
+        <p>[List your produce here or connect with buyers]</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br/>
+            <input type="text" id="name" name="name" required><br/>
+            <label for="email">Email:</label><br/>
+            <input type="email" id="email" name="email" required><br/>
+            <label for="message">Message:</label><br/>
+            <textarea id="message" name="message" rows="5" required></textarea><br/>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="help">
+        <h2>Helpline & FAQs</h2>
+        <p>For assistance, contact us at: 1800-123-456 or email support@farmersupport.com</p>
+        <h4>Frequently Asked Questions</h4>
+        <ul>
+            <li>Q: How can I access government schemes?<br/>A: Visit our articles section for details.</li>
+            <li>Q: Where can I sell my produce?<br/>A: Use the marketplace section above.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Farmer Support Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
