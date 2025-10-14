@@ -1,98 +1,139 @@
-/* ========== Base styles ========== */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #F1F8E9; /* light green background */
+    color: #333;
+    transition: all 0.3s ease;
 }
 
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
+    background-color: #689F38;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
 header h1 {
   margin: 0;
+  font-size: 2rem;
 }
 
-/* ========== Navigation styles ========== */
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: #4CAF50;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:#7CB342; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav ul li {
-  position: relative; /* needed for dropdown */
+    position: relative; /* needed for dropdown positioning */
+    margin: 0 10px;
 }
 
-nav ul li a,
-nav ul li .dropbtn {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 14px 20px;
-  font-weight: bold;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li .dropbtn:hover {
-  background-color: #45a049;
+nav ul li a:hover {
+    background-color: #CDDC39;
+    color: #333;
 }
 
-/* ========== Dropdown styles ========== */
+/* Dropdown content hidden by default */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  padding: 0;
-  margin: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 320px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1;
 }
 
-.dropdown-content li {
-  list-style: none;
-}
-
+/* Links inside dropdown */
 .dropdown-content li a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content li a:hover {
-  background-color: #f1f1f1;
+    background-color: #ddd;
 }
 
-/* Show dropdown when .show is added by JS */
+/* When JavaScript adds .show, display the dropdown */
 .dropdown-content.show {
-  display: block;
+    display: block;
 }
 
-/* ========== Manual Image Slider ========== */
-/* ========== Image Slider ========== */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #689F38;
+    padding-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color:#689F38;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color:  #7CB342;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color:  #CDDC39;
+    font-size: 0.9em;
+    color: #333;
+}
+/* Slider */
 .slider {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  margin: 20px auto;
   overflow: hidden;
-  border-radius: 8px;
-  background-color: #ccc;
+  border-radius: 10px;
 }
 
 .slides {
@@ -102,93 +143,23 @@ nav ul li .dropbtn:hover {
 
 .slides img {
   width: 100%;
-  height: 500px;height: 500px;
-  object-fit: cover;
-  flex-shrink: 0;
+  display: block;
 }
 
-/* Buttons */
-.slider button.prev,
-.slider button.next {
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  border: none;
+  background-color: rgba(104,159,56,0.8);
   color: white;
-  padding: 10px 16px;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 18px;
-  z-index: 10;
 }
 
-.slider button.prev {
-  left: 10px;
+.prev:hover, .next:hover {
+  background-color: #7CB342;
 }
 
-.slider button.next {
-  right: 10px;
-}
-
-.slider button:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* ========== Section styles ========== */
-section {
-  padding: 20px;
-  margin: 10px auto;
-  max-width: 800px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 5px;
-}
-
-/* ========== Form styles ========== */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input,
-textarea {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* ========== Footer styles ========== */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #ddd;
- font-size: 0.9em;
-}
-
-/* === Language switcher styles === */
-#google_translate_element {
-  float: right;        /* or left if you prefer */
-  margin: 10px;        /* space around it */
-  font-size: 0.9em;    /* adjust text size */
-}
- 
